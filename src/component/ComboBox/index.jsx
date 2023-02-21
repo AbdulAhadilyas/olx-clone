@@ -3,7 +3,7 @@ import TextField from "@mui/material/TextField";
 import Autocomplete from "@mui/material/Autocomplete";
 import { Box } from "@mui/system";
 
-export default function ComboBox(props) {
+export default function ComboBox( props ) {
   return (
     <Box>
       <Autocomplete
@@ -11,7 +11,9 @@ export default function ComboBox(props) {
         id="combo-box-demo"
         options={top100Films}
         {...props}
-        renderInput={(params) => <TextField {...params}  />}
+        renderInput={(params) => (
+          <TextField {...params} placeholder={props.placeholder} />
+        )}
       />
     </Box>
   );
